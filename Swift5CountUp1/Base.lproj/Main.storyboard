@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,79 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift5CountUp1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backImage" translatesAutoresizingMaskIntoConstraints="NO" id="iOq-uT-j8P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQN-V8-Yvf">
+                                <rect key="frame" x="16" y="277" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="sit-5O-85y"/>
+                                    <constraint firstAttribute="width" constant="128" id="yLR-0G-qvE"/>
+                                </constraints>
+                                <state key="normal" image="minus"/>
+                                <connections>
+                                    <action selector="minusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nph-eh-TaY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKf-Im-4Ct">
+                                <rect key="frame" x="160" y="94" width="54" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="MWH-0y-9Lk"/>
+                                    <constraint firstAttribute="height" constant="96" id="ird-YS-NHt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyF-YQ-mKF">
+                                <rect key="frame" x="231" y="277" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="57o-f6-f2W"/>
+                                    <constraint firstAttribute="height" constant="128" id="jei-b7-nLe"/>
+                                </constraints>
+                                <state key="normal" image="plus"/>
+                                <connections>
+                                    <action selector="plusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1j-hP-P8q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iOq-uT-j8P" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3jS-fE-QEo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TKf-Im-4Ct" secondAttribute="bottom" constant="477" id="5bU-QS-fBl"/>
+                            <constraint firstItem="TKf-Im-4Ct" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="DZ1-SC-4x3"/>
+                            <constraint firstItem="iOq-uT-j8P" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EsM-y8-Tff"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dyF-YQ-mKF" secondAttribute="trailing" constant="16" id="Ma4-To-6EL"/>
+                            <constraint firstItem="iOq-uT-j8P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="baz-X7-MOG"/>
+                            <constraint firstItem="iOq-uT-j8P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gm1-cS-rZZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TKf-Im-4Ct" secondAttribute="trailing" constant="161" id="ozT-GZ-1Ws"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZQN-V8-Yvf" secondAttribute="bottom" constant="262" id="qRv-ll-DdZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dyF-YQ-mKF" secondAttribute="trailing" constant="16" id="qe3-Sh-3Mv"/>
+                            <constraint firstItem="ZQN-V8-Yvf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sPb-fp-7AV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dyF-YQ-mKF" secondAttribute="bottom" constant="262" id="sgT-d2-fMd"/>
+                            <constraint firstItem="TKf-Im-4Ct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="uoP-ah-4zZ"/>
+                            <constraint firstItem="dyF-YQ-mKF" firstAttribute="leading" secondItem="ZQN-V8-Yvf" secondAttribute="trailing" constant="87" id="xOF-BI-arY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dyF-YQ-mKF" secondAttribute="trailing" constant="16" id="yUI-X8-wPw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="TKf-Im-4Ct" id="c5c-rd-m78"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="86.806596701649184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backImage" width="1080" height="1920"/>
+        <image name="minus" width="128" height="128"/>
+        <image name="plus" width="128" height="128"/>
+    </resources>
 </document>
